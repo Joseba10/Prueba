@@ -1,0 +1,37 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Cracks</ion-title>
+</ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+  
+    <ion-item *ngFor="let juegos of gamedata">
+    <h2>{{juegos.title}}</h2>
+      <ion-avatar item-left>
+
+        <img class="imagen" (click)="goToCrackImage()" src="{{juegos.image}}">
+
+      </ion-avatar>
+      <p>Fecha de lanzamiento:</p>
+      <p> {{juegos.releaseDate}}</p>
+      <p>Fecha de Crackeado:</p> 
+      <p>{{juegos.crackDate}}</p>
+      <p>Precio Original: {{juegos.OriginalPrice}} $</p>
+      <p>El Mejor Precio: {{juegos.BestPrice1}} $</p>
+      <p class="Capitalize">Plataforma: {{juegos.DRM1}}</p>
+      <p>Cracker {{juegos.SceneGroup1}}</p>
+
+    </ion-item>
+        
+
+  </ion-list>
+
+</ion-content>

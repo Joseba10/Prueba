@@ -1,0 +1,27 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Imagen Aumentada</ion-title>
+</ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  
+    <ion-item class="contenedor" *ngFor="let juegos of gamedata">
+
+      <h1 class="title">{{juegos.title}}</h1>
+
+      
+
+          <img class="imagen" src="{{juegos.image}}">
+
+    
+    </ion-item>
+
+</ion-content>
